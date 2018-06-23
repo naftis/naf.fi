@@ -12,6 +12,7 @@ const Name = styled.div`
   color: #000;
   font-family: 'Crimson Text', serif;
   font-size: 7rem;
+  user-select: none;
 
   -moz-text-stroke-color: black;
   -webkit-text-stroke-color: black;
