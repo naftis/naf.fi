@@ -6,12 +6,12 @@ import registerServiceWorker from './registerServiceWorker';
 
 // tslint:disable-next-line: no-unused-expression
 injectGlobal`
-  @import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+  @import url('https://fonts.googleapis.com/css?family=Crimson+Text|Faster+One');
 
   body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Faster One', sans-serif;
   }
 `;
 
