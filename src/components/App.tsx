@@ -14,11 +14,21 @@ const Wrapper = styled.div`
 const colorAnimation = keyframes`
   from {
     color: #fff;
+    opacity: 1;
+  }
+  50% {
+    font-family: 'Faster One', sans-serif;
+    color: #fff;
+    opacity: 0;
+  }
+  51% {
     font-family: 'Crimson Text', serif;
+    color: #000;
   }
   to {
-    color: #000;
     font-family: 'Crimson Text', serif;
+    color: #000;
+    opacity: 1;
   }
 `;
 
@@ -34,7 +44,13 @@ const Links = styled.div`
     text-decoration: none;
     padding: 0 1rem;
 
-    animation: ${colorAnimation} 500ms 7s forwards;
+    animation: ${colorAnimation} 1s 7s forwards;
+  }
+
+  @media (max-width: 420px) {
+    width: 100vw;
+    text-align: center;
+    box-sizing: border-box;
   }
 `;
 
@@ -44,7 +60,7 @@ const App = () => (
       <a href="https://linkedin.com/in/pyry-rouvila">linkedin</a>
       <a href="https://github.com/naftis">github</a>
     </Links>
-    <Name>Pyry Rouvila</Name>
+    <Name first="Pyry" last="Rouvila" />
     <Colorbars />
   </Wrapper>
 );

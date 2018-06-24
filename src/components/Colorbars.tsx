@@ -18,43 +18,33 @@ const slideUpAnimation = keyframes`
   }
 `;
 
-const Darkblue = styled.div`
-  background: #001eff;
+const Colorbar = styled.div`
   width: 20vw;
   height: 100vh;
+`;
 
+const Darkblue = styled(Colorbar)`
+  background: #001eff;
   animation: ${slideUpAnimation} 1s 6s forwards;
 `;
 
-const Pink = styled.div`
+const Pink = styled(Colorbar)`
   background: #f000ff;
-  width: 20vw;
-  height: 100vh;
-
   animation: ${slideUpAnimation} 0.9s 6.5s forwards;
 `;
 
-const Lightblue = styled.div`
+const Lightblue = styled(Colorbar)`
   background: #4deeea;
-  width: 20vw;
-  height: 100vh;
-
   animation: ${slideUpAnimation} 0.75s 7s forwards;
 `;
 
-const Yellow = styled.div`
+const Yellow = styled(Colorbar)`
   background: #ffe700;
-  width: 20vw;
-  height: 100vh;
-
   animation: ${slideUpAnimation} 0.65s 7.5s forwards;
 `;
 
-const Green = styled.div`
+const Green = styled(Colorbar)`
   background: #74ee15;
-  width: 20vw;
-  height: 100vh;
-
   animation: ${slideUpAnimation} 0.55s 8s forwards;
 `;
 
