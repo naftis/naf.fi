@@ -38,15 +38,13 @@ const Links = styled.div`
   }
 `;
 
-const name = 'Pyry Rouvila';
-
 const App = () => (
   <Wrapper>
     <Links id="links">
       <a href="https://linkedin.com/in/pyry-rouvila">linkedin</a>
       <a href="https://github.com/naftis">github</a>
     </Links>
-    <Name>{name}</Name>
+    <Name>Pyry Rouvila</Name>
     <Colorbars />
   </Wrapper>
 );
