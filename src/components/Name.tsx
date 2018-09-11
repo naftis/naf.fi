@@ -155,16 +155,11 @@ interface INameProps {
   last: string;
 }
 
-class Name extends React.Component<INameProps, {}> {
-  public render() {
-    const { first, last } = this.props;
-    return (
-      <NameWrapper>
-        <div>{generateLetters(first)}</div>
-        <div>{generateLetters(last)}</div>
-      </NameWrapper>
-    );
-  }
-}
+const Name: React.SFC<INameProps> = ({ first, last }) => (
+  <NameWrapper>
+    <div>{generateLetters(first)}</div>
+    <div>{generateLetters(last)}</div>
+  </NameWrapper>
+);
 
 export default Name;
