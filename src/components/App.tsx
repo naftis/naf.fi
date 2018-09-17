@@ -1,9 +1,10 @@
 import * as React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Colorbars from './Colorbars';
+import ConicGradient from './ConicGradient';
 import Name from './Name';
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,6 +33,16 @@ const colorAnimation = keyframes`
   }
 `;
 
+const toWhiteAnimation = keyframes`
+  from {
+    color: #000;
+  }
+
+  to {
+    color: #fff;
+  }
+`;
+
 const Links = styled.div`
   position: absolute;
   top: 0;
@@ -44,7 +55,8 @@ const Links = styled.div`
     text-decoration: none;
     padding: 0 1rem;
 
-    animation: ${colorAnimation} 1s 7s forwards;
+    animation: ${colorAnimation} 1s 7s forwards,
+      ${toWhiteAnimation} 1s 17s forwards;
   }
 
   @media (max-width: 420px) {
@@ -62,6 +74,7 @@ const App = () => (
     </Links>
     <Name first="Pyry" last="Rouvila" />
     <Colorbars />
+    <ConicGradient />
   </Wrapper>
 );
 

@@ -21,31 +21,37 @@ const slideUpAnimation = keyframes`
 const Colorbar = styled.div`
   width: 20vw;
   height: 100vh;
+  animation: ${slideUpAnimation} 1s ease-out 6s forwards;
 `;
 
 const Darkblue = styled(Colorbar)`
   background: #001eff;
-  animation: ${slideUpAnimation} 1s 6s forwards;
+  animation-duration: 1s;
+  animation-delay: 6s;
 `;
 
 const Pink = styled(Colorbar)`
   background: #f000ff;
-  animation: ${slideUpAnimation} 0.9s 6.5s forwards;
+  animation-duration: 0.9s;
+  animation-delay: 6.5s;
 `;
 
 const Lightblue = styled(Colorbar)`
   background: #4deeea;
-  animation: ${slideUpAnimation} 0.75s 7s forwards;
+  animation-duration: 0.75s;
+  animation-delay: 7s;
 `;
 
 const Yellow = styled(Colorbar)`
   background: #ffe700;
-  animation: ${slideUpAnimation} 0.65s 7.5s forwards;
+  animation-duration: 0.65s;
+  animation-delay: 7.5s;
 `;
 
 const Green = styled(Colorbar)`
   background: #74ee15;
-  animation: ${slideUpAnimation} 0.55s 8s forwards;
+  animation-duration: 0.55s;
+  animation-delay: 8s;
 `;
 
 const Colorbars = () => (

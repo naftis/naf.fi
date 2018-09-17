@@ -1,33 +1,6 @@
 import * as React from 'react';
 import styled, { css, keyframes } from 'styled-components';
 
-const burnAnimation = keyframes`
-  from {
-    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
-      -0.2em -0.2em 0.4em #ffae34, 0.2em -0.3em 0.3em #ec760c,
-      -0.2em -0.4em 0.4em #cd4606, 0.1em -0.5em 0.7em #973716,
-      0.1em -0.7em 0.7em #451b0e;
-  }
-  45% {
-    text-shadow: 0.1em -0.2em 0.5em #fefcc9, 0.15em 0 0.4em #feec85,
-      -0.1em -0.25em 0.5em #ffae34, 0.15em -0.45em 0.5em #ec760c,
-      -0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
-      0.2em -1em 0.8em #451b0e;
-  }
-  70% {
-    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
-      -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c,
-      -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716,
-      0.1em -0.7em 0.9em #451b0e;
-  }
-  to {
-    text-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85,
-      0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c,
-      0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
-      -0.2em -1em 0.8em #451b0e;
-  }
-`;
-
 const nameWrapperCss = css`
   color: #000;
   user-select: none;
@@ -46,20 +19,10 @@ const outFromScreenAnimation = keyframes`
   from {
     transform: translate(0);
     z-index: 0;
-
-    text-shadow: -0.1em 0 0.3em #fefcc9, 0.1em -0.1em 0.3em #feec85,
-      -0.2em -0.2em 0.6em #ffae34, 0.2em -0.3em 0.4em #ec760c,
-      -0.2em -0.4em 0.7em #cd4606, 0.1em -0.5em 0.7em #973716,
-      0.1em -0.7em 0.9em #451b0e;
   }
   99% {
     transform: translate(110vw);
     z-index: 0;
-
-    text-shadow: -0.1em -0.2em 0.6em #fefcc9, -0.15em 0 0.6em #feec85,
-      0.1em -0.25em 0.6em #ffae34, -0.15em -0.45em 0.5em #ec760c,
-      0.1em -0.5em 0.6em #cd4606, 0 -0.8em 0.6em #973716,
-      -0.2em -1em 0.8em #451b0e;
 
     ${nameWrapperCss}
   }
@@ -109,8 +72,7 @@ const NameWrapper = styled.div`
     }
   }
 
-  animation: ${burnAnimation} 1.5s linear infinite alternate,
-    ${outFromScreenAnimation} 1s cubic-bezier(0.41, -0.48, 0, 1) 5s forwards;
+  animation: ${outFromScreenAnimation} 1s cubic-bezier(0.41, -0.48, 0, 1) 5s forwards;
 
   ${nameWrapperCss};
 `;
