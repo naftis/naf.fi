@@ -14,7 +14,7 @@ function useRandomImages() {
   const [images, setImages] = useState<string[]>([]);
 
   useEffect(() => {
-    const newImages = Array.from({ length: AMOUNT_OF_IMAGES }).map(
+    const newImages = [...Array(AMOUNT_OF_IMAGES)].map(
       (_, n) =>
         `${
           RANDOM_SOURCES[n % RANDOM_SOURCES.length]

@@ -2,8 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled/macro';
 
 function drawLineUpRight(x: number, y: number, length: number) {
-  return Array.from(
-    { length },
+  return [...Array(length)].map(
     (_, i) => `
     <rect x='${x * 12 + (length - i) * 12}' y='${y * 12 +
       i * 12}' fill='white' opacity='0.2' width='12' height='12' />

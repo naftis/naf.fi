@@ -5,7 +5,7 @@ import useRandomImages from '../hooks/useRandomImages';
 const IMAGE_SIZE_SQUARE_ROOT = 64;
 const AMOUNT_OF_IMAGES = 3;
 
-const colors = Array.from({ length: AMOUNT_OF_IMAGES }).map(
+const colors = [...Array(AMOUNT_OF_IMAGES)].map(
   _ =>
     `#${Math.random()
       .toString(16)
@@ -77,11 +77,11 @@ function Background() {
     : Math.ceil(height / IMAGE_SIZE_SQUARE_ROOT);
 
   return (
-    <Container>
+    <Container aria-hidden="true">
       <ExtraWideContainer>
-        {Array.from({ length: amountOfItemsPerCol }).map((_, row) => (
+        {[...Array(amountOfItemsPerCol)].map((_, row) => (
           <Row key={`row_${row}`}>
-            {Array.from({ length: amountOfItemsPerRow }).map((_, n) => (
+            {[...Array(amountOfItemsPerRow)].map((_, n) => (
               <Tile
                 key={`image_${n}`}
                 bgColor={colors[(row + n) % colors.length]}
