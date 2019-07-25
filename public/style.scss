@@ -6,6 +6,11 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
 p {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.15rem;
@@ -83,21 +88,21 @@ h2 {
   max-height: 50rem;
   top: 0;
   right: 0;
-  background: linear-gradient(0deg, #fff, rgb(250, 250, 250));
+  background: linear-gradient(0deg, #fff, #fff 25%, rgb(247, 247, 247));
   z-index: -1;
   clip-path: url("#backgroundclip");
   overflow: hidden;
 }
 
 #portrait {
-  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
   width: 50vw;
   background-image: url(pyry.png);
   background-repeat: no-repeat;
   background-size: 90%;
-  background-position: 0 10rem;
+  background-position: bottom right;
   z-index: -1;
 }
