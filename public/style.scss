@@ -1,0 +1,95 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 1.15rem;
+  letter-spacing: 0.4px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+
+    address {
+      font-size: 0.85rem;
+      font-style: normal;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  h1 {
+    font-size: 0.95rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+nav {
+  margin: 0 -1rem;
+
+  a {
+    padding: 0 1rem;
+  }
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+
+  article {
+    width: 50vw;
+  }
+
+  aside {
+    width: 50vw;
+
+    img {
+      object-fit: cover;
+      width: 1050px;
+    }
+  }
+}
+
+h2 {
+  display: inline-block;
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-size: 2.5rem;
+
+  span {
+    margin-right: -1rem;
+  }
+}
+
+#background {
+  position: absolute;
+  width: 50vw;
+  height: 30rem;
+  top: -7rem;
+  right: 0;
+  background: linear-gradient(0deg, #fff, rgb(245, 245, 245));
+  border-top-left-radius: 30rem;
+  z-index: -1;
+}
