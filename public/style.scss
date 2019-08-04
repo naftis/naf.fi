@@ -2,7 +2,9 @@ body,
 html {
   padding: 0;
   margin: 0;
-  font-family: Poppins, sans-serif;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   overflow-x: hidden;
 }
 
@@ -183,7 +185,7 @@ h2 {
         #fff 90%,
         #fff
       ),
-      url(portrait.png);
+      url(smaller-portrait.jpg);
   }
 
   @media (max-width: 450px) {
