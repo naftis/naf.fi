@@ -1,32 +1,201 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>pyry</title>
-  <meta name="description" content="pyry">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="pyry">
-  <meta property="og:description" content="pyry rouvila">
-  <meta property="og:image" content="https://naf.fi/avatar.jpg">
-  <meta property="og:url" content="https://naf.fi">
-  <meta property="og:type" content="profile">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "pyry rouvila",
-    "url": "https://naf.fi",
-    "email": "mailto:pyry.rouvila@gmail.com",
-    "image": "https://naf.fi/avatar.jpg",
-    "jobTitle": "artist",
-    "sameAs": [
-      "https://github.com/naftis",
-      "https://linkedin.com/in/naf"
-    ]
-  }
-  </script>
-</head>
-<body>
-  pyry.rouvila@gmail.com
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>pyry rouvila</title>
+    <meta
+      name="description"
+      content="personal site of pyry rouvila, artist. github, linkedin and email if you want to get in touch."
+    />
+    <meta name="author" content="pyry rouvila" />
+    <link rel="canonical" href="https://naf.fi/" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="96x96" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.jpg" sizes="180x180" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="naf.fi" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="pyry rouvila — artist" />
+    <meta
+      property="og:description"
+      content="personal site of pyry rouvila, artist. github, linkedin and email if you want to get in touch."
+    />
+    <meta property="og:url" content="https://naf.fi/" />
+    <meta property="og:image" content="https://naf.fi/avatar.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    <meta property="og:image:alt" content="pyry rouvila" />
+    <meta property="profile:first_name" content="pyry" />
+    <meta property="profile:last_name" content="rouvila" />
+    <meta property="profile:username" content="naftis" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="pyry rouvila — artist" />
+    <meta
+      name="twitter:description"
+      content="personal site of pyry rouvila, artist. github, linkedin and email if you want to get in touch."
+    />
+    <meta name="twitter:image" content="https://naf.fi/avatar.jpg" />
+    <meta name="twitter:image:alt" content="pyry rouvila" />
+
+    <link rel="preconnect" href="https://picsum.photos" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://naf.fi/#website",
+            "url": "https://naf.fi/",
+            "name": "naf.fi",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://naf.fi/#pyry" },
+            "mainEntity": { "@id": "https://naf.fi/#pyry" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://naf.fi/#pyry",
+            "name": "pyry rouvila",
+            "givenName": "pyry",
+            "familyName": "rouvila",
+            "alternateName": "naf",
+            "url": "https://naf.fi/",
+            "email": "mailto:pyry.rouvila@gmail.com",
+            "image": "https://naf.fi/avatar.jpg",
+            "jobTitle": "artist",
+            "sameAs": [
+              "https://github.com/naftis",
+              "https://linkedin.com/in/naf"
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+          "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+          sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      ::selection {
+        background: #000;
+      }
+
+      .container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .extra-wide-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100vw + 64px);
+        filter: hue-rotate(90deg) contrast(200%) brightness(150%);
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .row img {
+        width: 64px;
+        height: 64px;
+        background-size: cover;
+        image-rendering: pixelated;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" aria-hidden="true">
+      <div class="extra-wide-container" id="background"></div>
+    </div>
+
+    <script>
+      (function () {
+        var IMAGE_SIZE_SQUARE_ROOT = 64;
+        var AMOUNT_OF_IMAGES = 3;
+
+        var imageSizeSmaller = Math.floor(IMAGE_SIZE_SQUARE_ROOT / 2 / 2 / 2);
+        var RANDOM_SOURCES = ["https://picsum.photos/" + imageSizeSmaller];
+
+        var currentTimestamp = Number(new Date());
+
+        var colors = [];
+        for (var c = 0; c < AMOUNT_OF_IMAGES; c++) {
+          colors.push("#" + Math.random().toString(16).slice(2, 8));
+        }
+
+        var images = [];
+        for (var i = 0; i < AMOUNT_OF_IMAGES; i++) {
+          images.push(
+            RANDOM_SOURCES[i % RANDOM_SOURCES.length] +
+              "?r=" +
+              currentTimestamp +
+              "_" +
+              i,
+          );
+        }
+
+        var background = document.getElementById("background");
+
+        function render() {
+          var amountOfItemsPerRow = Math.ceil(
+            window.innerWidth / IMAGE_SIZE_SQUARE_ROOT,
+          );
+          var amountOfItemsPerCol = Math.ceil(
+            window.innerHeight / IMAGE_SIZE_SQUARE_ROOT,
+          );
+
+          var fragment = document.createDocumentFragment();
+
+          for (var row = 0; row < amountOfItemsPerCol; row++) {
+            var rowElement = document.createElement("div");
+            rowElement.className = "row";
+
+            for (var n = 0; n < amountOfItemsPerRow; n++) {
+              var tile = document.createElement("img");
+              tile.style.backgroundColor = colors[(row + n) % colors.length];
+              tile.src = images[(row + n) % images.length];
+              rowElement.appendChild(tile);
+            }
+
+            fragment.appendChild(rowElement);
+          }
+
+          background.innerHTML = "";
+          background.appendChild(fragment);
+        }
+
+        render();
+        window.addEventListener("resize", render);
+      })();
+    </script>
+  </body>
 </html>
